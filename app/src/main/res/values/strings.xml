@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Medalmanah</string>
+
+    <string name="open">Открыть</string>
+    <string name="close">Закрыть</string>
+
+    <string name="news">Новости</string>
+    <string name="tryAgain">Попробывать снова</string>
+
+
+</resources>

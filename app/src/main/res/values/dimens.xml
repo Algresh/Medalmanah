@@ -1,0 +1,18 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <dimen name="tabIndicatorHeight">6dp</dimen>
+    <dimen name="navigationViewWidth">240dp</dimen>
+    <dimen name="cardElevation">2dp</dimen>
+    <dimen name="itemNewsBase">8dp</dimen>
+
+    <dimen name="itemNewsBaseDateTextSize">12sp</dimen>
+    <dimen name="itemNewsBaseTitleTextSize">18sp</dimen>
+    <dimen name="itemNewsBaseTypeTextSize">14sp</dimen>
+    <dimen name="itemNewsBaseTxtTextSize">14sp</dimen>
+    <dimen name="itemNewsBaseLikesTextSize">16sp</dimen>
+    <dimen name="itemNewsBaseCommentTextSize">14sp</dimen>
+    <dimen name="itemNewsBaseScoreTextSize">14sp</dimen>
+</resources>

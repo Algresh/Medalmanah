@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/cardViewNews"
+    card_view:cardElevation="@dimen/cardElevation"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageItemNews"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/itemNewsDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/itemNewsBase.date"/>
+
+        <TextView
+            android:id="@+id/itemNewsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/itemNewsBase.title"/>
+
+        <TextView
+            android:id="@+id/itemNewsType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/itemNewsBase.type"/>
+
+        <TextView
+            android:id="@+id/itemNewsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/itemNewsBase.text"/>
+        
+        <LinearLayout
+            style="@style/itemNewsBasePanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnLikeNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/itemNewsPanelLikeBtn"/>
+
+            <TextView
+                android:id="@+id/differLikesDislikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/itemNewsPanelDislikeBtn"/>
+
+            <ImageButton
+                android:id="@+id/btnDislikeNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/itemNewsPanelLikeBtn"/>
+
+            <TextView
+                android:id="@+id/newsComments"
+                android:drawableLeft="@drawable/comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/itemNewsPanelComment"/>
+
+            <TextView
+                android:id="@+id/newsScore"
+                android:drawableLeft="@drawable/star_outline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/itemNewsPanelScore"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+

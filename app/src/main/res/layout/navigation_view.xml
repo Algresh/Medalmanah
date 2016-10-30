@@ -1,0 +1,11 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<android.support.design.widget.NavigationView
+    android:id="@+id/navigationView"
+    android:layout_gravity="start"
+    android:background="@color/colorBackGroundNavigationView"
+    android:layout_width="@dimen/navigationViewWidth"
+    android:layout_height="match_parent"
+    app:menu="@menu/menu_navigation_view" />
+</merge>
