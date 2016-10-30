@@ -9,6 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import javax.inject.Inject;
+
+import ru.tulupov.alex.medalmanah.Presenter.NewsPresenter;
+
 public class NewsFragment extends BaseFragment {
 
     public static final int LAYOUT = R.layout.news_fragment;
@@ -17,10 +21,21 @@ public class NewsFragment extends BaseFragment {
     protected Button buttonTryAgain;
     protected SwipeRefreshLayout refreshLayout;
 
+    @Inject
+    protected NewsPresenter presenter;
+
+    public static NewsFragment getInstance() {
+        NewsFragment fragment = new NewsFragment();
+
+        return fragment;
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(LAYOUT, container, false);
+
+
 
         recyclerView = (RecyclerView) view.findViewById(R.id.recycleViewNews);
         buttonTryAgain = (Button) view.findViewById(R.id.buttonTryAgain);
@@ -35,6 +50,6 @@ public class NewsFragment extends BaseFragment {
 
 
 
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
     }
 }

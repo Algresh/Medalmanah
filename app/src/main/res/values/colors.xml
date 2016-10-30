@@ -5,8 +5,8 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="colorTabIndicator">#EEEEEE</color>
-    <color name="colorTabText">#FFFFFF</color>
-    <color name="colorTabSelectedText">#000000</color>
+    <color name="colorTabText">#000000</color>
+    <color name="colorTabSelectedText">#FFFFFF</color>
 
     <color name="colorBackGroundNavigationView">#FFFFFF</color>
 </resources>

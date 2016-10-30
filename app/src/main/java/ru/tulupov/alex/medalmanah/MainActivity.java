@@ -4,7 +4,6 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.widget.TextView;
 
 
 public class MainActivity extends BaseActivity {
@@ -17,17 +16,17 @@ public class MainActivity extends BaseActivity {
         Resources resources = getResources();
         initToolbar(resources.getString(R.string.news));
         initNavigationView();
-
-
-
-
+        initTabs();
     }
 
-    private void initTabs () {
+    private void initTabs() {
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewPager);
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabLayout);
 
-//        String[] tabsTitle = getResources()
+        String[] tabsTitle = getResources().getStringArray(R.array.tabs_main);
+        TabsMainAdapter tabsMainAdapter = new TabsMainAdapter(getSupportFragmentManager(), tabsTitle);
+        viewPager.setAdapter(tabsMainAdapter);
+        tabLayout.setupWithViewPager(viewPager);
 
     }
 }

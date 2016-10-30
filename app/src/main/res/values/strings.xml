@@ -6,6 +6,11 @@
 
     <string name="news">Новости</string>
     <string name="tryAgain">Попробывать снова</string>
+    
+    <string-array name="tabs_main">
+        <item>Публикации</item>
+        <item>Мероприятия</item>
+    </string-array>
 
 
 </resources>
