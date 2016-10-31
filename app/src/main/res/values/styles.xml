@@ -16,7 +16,10 @@
     </style>
 
     <style name="itemNewsBase">
-        <item name="android:padding">@dimen/itemNewsBase</item>
+        <item name="android:paddingTop">@dimen/itemNewsBasePaddingTop</item>
+        <item name="android:paddingLeft">@dimen/itemNewsBasePaddingLeft</item>
+        <item name="android:paddingRight">@dimen/itemNewsBasePaddingRight</item>
+        <item name="android:textColor">@color/colorTextItemNews</item>
     </style>
 
     <style name="itemNewsBase.date" parent="itemNewsBase">
@@ -30,33 +33,43 @@
 
     <style name="itemNewsBase.text" parent="itemNewsBase">
         <item name="android:textSize">@dimen/itemNewsBaseTxtTextSize</item>
+        <item name="android:paddingTop">@dimen/itemNewsTextPaddingTop</item>
     </style>
 
     <style name="itemNewsBase.type" parent="itemNewsBase">
         <item name="android:textSize">@dimen/itemNewsBaseTypeTextSize</item>
+        <item name="android:paddingTop">@dimen/itemNewsTypePaddingTop</item>
     </style>
 
 
-    <style name="itemNewsBasePanel" parent="itemNewsBase"/>
+    <style name="itemNewsBasePanel" parent="itemNewsBase">
+        <item name="android:paddingBottom">8dp</item>
+    </style>
 
     <style name="itemNewsPanelLikeBtn" >
-
+        <item name="android:paddingRight">@dimen/itemNewsPanelPaddingRight</item>
     </style>
 
     <style name="itemNewsPanelDislikeBtn" >
-
+        <item name="android:paddingRight">@dimen/itemNewsPanelPaddingRight</item>
     </style>
 
     <style name="itemNewsPanelLikes" >
         <item name="android:textSize">@dimen/itemNewsBaseLikesTextSize</item>
+        <item name="android:paddingRight">@dimen/itemNewsPanelPaddingRight</item>
+        <item name="android:textColor">@color/colorTextItemNews</item>
     </style>
 
     <style name="itemNewsPanelComment" >
         <item name="android:textSize">@dimen/itemNewsBaseCommentTextSize</item>
+        <item name="android:paddingRight">@dimen/itemNewsPanelPaddingRight</item>
+        <item name="android:textColor">@color/colorTextItemNews</item>
     </style>
 
     <style name="itemNewsPanelScore" >
         <item name="android:textSize">@dimen/itemNewsBaseScoreTextSize</item>
+        <item name="android:paddingRight">@dimen/itemNewsPanelPaddingRight</item>
+        <item name="android:textColor">@color/colorTextItemNews</item>
     </style>
 
     <style name="buttonTryAgain" >

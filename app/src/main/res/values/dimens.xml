@@ -6,7 +6,13 @@
     <dimen name="tabIndicatorHeight">6dp</dimen>
     <dimen name="navigationViewWidth">240dp</dimen>
     <dimen name="cardElevation">2dp</dimen>
-    <dimen name="itemNewsBase">8dp</dimen>
+    <dimen name="itemNewsBasePaddingTop">8dp</dimen>
+    <dimen name="itemNewsBasePaddingLeft">8dp</dimen>
+    <dimen name="itemNewsBasePaddingRight">8dp</dimen>
+
+    <dimen name="itemNewsTextPaddingTop">4dp</dimen>
+    <dimen name="itemNewsTypePaddingTop">4dp</dimen>
+    <dimen name="itemNewsPanelPaddingRight">4dp</dimen>
 
     <dimen name="itemNewsBaseDateTextSize">12sp</dimen>
     <dimen name="itemNewsBaseTitleTextSize">18sp</dimen>

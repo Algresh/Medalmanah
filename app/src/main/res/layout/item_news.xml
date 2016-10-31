@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardViewNews"
     card_view:cardElevation="@dimen/cardElevation"
     card_view:cardUseCompatPadding="true">
@@ -42,44 +42,70 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/itemNewsBase.text"/>
-        
-        <LinearLayout
+
+        <RelativeLayout
+            android:orientation="horizontal"
             style="@style/itemNewsBasePanel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/btnLikeNews"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                tools:src="@drawable/thumb_up"
                 style="@style/itemNewsPanelLikeBtn"/>
 
             <TextView
                 android:id="@+id/differLikesDislikes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/itemNewsPanelDislikeBtn"/>
-
-            <ImageButton
-                android:id="@+id/btnDislikeNews"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                style="@style/itemNewsPanelLikeBtn"/>
+                style="@style/itemNewsPanelLikes"
+                tools:text="4"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/btnLikeNews"
+                android:layout_toEndOf="@+id/btnLikeNews" />
 
             <TextView
                 android:id="@+id/newsComments"
-                android:drawableLeft="@drawable/comment"
+                android:drawableLeft="@drawable/comment_text_outline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/itemNewsPanelComment"/>
+                style="@style/itemNewsPanelComment"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/newsScore"
+                android:layout_toStartOf="@+id/newsScore" />
 
             <TextView
                 android:id="@+id/newsScore"
                 android:drawableLeft="@drawable/star_outline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                style="@style/itemNewsPanelScore"/>
-        </LinearLayout>
+                android:gravity="center"
+                style="@style/itemNewsPanelScore"
+                android:layout_marginRight="23dp"
+                android:layout_marginEnd="23dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:id="@+id/btnDislikeNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:src="@drawable/thumb_down"
+                style="@style/itemNewsPanelLikeBtn"
+
+
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="6dp"
+                android:layout_toEndOf="@+id/differLikesDislikes"
+                android:layout_toRightOf="@+id/differLikesDislikes" />
+
+
+        </RelativeLayout>
 
 
     </LinearLayout>

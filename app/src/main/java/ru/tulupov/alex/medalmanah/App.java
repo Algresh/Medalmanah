@@ -3,12 +3,12 @@ package ru.tulupov.alex.medalmanah;
 import android.app.Application;
 
 import ru.tulupov.alex.medalmanah.DI.AppComponent;
-
-/**
- * Created by tulup on 30.10.2016.
- */
+import ru.tulupov.alex.medalmanah.DI.DaggerAppComponent;
+import ru.tulupov.alex.medalmanah.DI.NewsModule;
 
 public class App extends Application {
+
+    public static final String DOMAIN = "https://medalmanah.ru";
 
     private static AppComponent component;
 
@@ -16,13 +16,13 @@ public class App extends Application {
         return component;
     }
 
-//    protected AppComponent buildComponent() {
-//
-//    }
+    protected AppComponent buildComponent() {
+        return DaggerAppComponent.builder().newsModule(new NewsModule(DOMAIN)).build();
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        component = getComponent();
+        component = buildComponent();
     }
 }
