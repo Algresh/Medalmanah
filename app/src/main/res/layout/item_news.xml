@@ -72,8 +72,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/itemNewsPanelComment"
-                android:layout_marginRight="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginRight="@dimen/newsCommentsMargin"
+                android:layout_marginEnd="@dimen/newsCommentsMargin"
                 android:layout_alignParentTop="true"
                 android:layout_toLeftOf="@+id/newsScore"
                 android:layout_toStartOf="@+id/newsScore" />
@@ -85,8 +85,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 style="@style/itemNewsPanelScore"
-                android:layout_marginRight="23dp"
-                android:layout_marginEnd="23dp"
+                android:layout_marginRight="@dimen/newsScoreMargin"
+                android:layout_marginEnd="@dimen/newsScoreMargin"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true" />
@@ -97,10 +97,8 @@
                 android:layout_height="wrap_content"
                 tools:src="@drawable/thumb_down"
                 style="@style/itemNewsPanelLikeBtn"
-
-
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="6dp"
+                android:layout_marginLeft="@dimen/btnDislikeNewsMarginLeft"
                 android:layout_toEndOf="@+id/differLikesDislikes"
                 android:layout_toRightOf="@+id/differLikesDislikes" />
 

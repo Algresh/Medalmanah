@@ -12,5 +12,10 @@
         <item>Мероприятия</item>
     </string-array>
 
+    <string-array name="type_publications">
+        <item>Новости</item>
+        <item>Статьи</item>
+    </string-array>
+
 
 </resources>

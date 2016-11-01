@@ -79,6 +79,7 @@ public class NewsFragment extends BaseFragment implements NewsView {
             news.setLike(6);
             news.setDislike(3);
             news.setCommentCount(2);
+            news.setType(0);
             news.setPreview("/upload/publication/1477582267.png");
             list.add(news);
         }

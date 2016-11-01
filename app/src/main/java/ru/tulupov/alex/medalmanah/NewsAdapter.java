@@ -1,6 +1,7 @@
 package ru.tulupov.alex.medalmanah;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,9 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
+
+    public static final int TYPE_NEWS = 0;
+    public static final int TYPE_ARTICLES = 1;
 
     private List<News> newsList;
     private Context context;
@@ -31,6 +35,8 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
 
     @Override
     public void onBindViewHolder(NewsViewHolder holder, int position) {
+        Resources resources = context.getResources();
+
         News news = newsList.get(position);
 
         holder.text.setText(news.getAnons());
@@ -38,10 +44,17 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         holder.date.setText(news.getCreated());
         holder.rating.setText(String.valueOf(news.getRating()));
         holder.comments.setText(String.valueOf(news.getCommentCount()));
-        holder.likes.setText(" " + String.valueOf(news.getLike() - news.getDislike()));
-        holder.type.setText("Новости");
+        holder.likes.setText(String.valueOf(news.getLike() - news.getDislike()));
 
-//        holder.likes.d
+        int type = news.getType();
+        if (type >= 0 && type < 2) {
+            String[] arr = resources.getStringArray(R.array.type_publications);
+            holder.type.setText(arr[type]);
+        } else {
+            holder.type.setText("");
+        }
+
+
         holder.buttonLike.setImageResource(R.drawable.thumb_up_outline);
         holder.buttonDislike.setImageResource(R.drawable.thumb_down_outline);
 

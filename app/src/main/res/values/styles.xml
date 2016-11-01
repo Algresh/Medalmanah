@@ -76,5 +76,30 @@
 
     </style>
 
+    <style name="itemEventBase">
+        <item name="android:paddingTop">@dimen/itemNewsBasePaddingTop</item>
+        <item name="android:paddingLeft">@dimen/itemNewsBasePaddingLeft</item>
+        <item name="android:paddingRight">@dimen/itemNewsBasePaddingRight</item>
+        <item name="android:textColor">@color/colorTextItemNews</item>
+    </style>
+
+    <style name="itemEventBase.start" parent="itemNewsBase">
+        <item name="android:textSize">@dimen/itemNewsBaseDateTextSize</item>
+    </style>
+
+    <style name="itemEventBase.end" parent="itemNewsBase">
+        <item name="android:textSize">@dimen/itemNewsBaseDateTextSize</item>
+    </style>
+
+    <style name="itemEventBase.text" parent="itemNewsBase">
+        <item name="android:textSize">@dimen/itemNewsBaseTxtTextSize</item>
+        <item name="android:paddingTop">@dimen/itemNewsTextPaddingTop</item>
+    </style>
+
+    <style name="itemEventBase.title" parent="itemEventBase">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/itemNewsBaseTitleTextSize</item>
+    </style>
+
 
 </resources>

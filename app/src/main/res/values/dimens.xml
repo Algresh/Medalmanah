@@ -14,6 +14,11 @@
     <dimen name="itemNewsTypePaddingTop">4dp</dimen>
     <dimen name="itemNewsPanelPaddingRight">4dp</dimen>
 
+    <dimen name="btnDislikeNewsMarginLeft">3dp</dimen>
+
+    <dimen name="newsScoreMargin">23dp</dimen>
+    <dimen name="newsCommentsMargin">20dp</dimen>
+
     <dimen name="itemNewsBaseDateTextSize">12sp</dimen>
     <dimen name="itemNewsBaseTitleTextSize">18sp</dimen>
     <dimen name="itemNewsBaseTypeTextSize">14sp</dimen>
