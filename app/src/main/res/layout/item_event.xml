@@ -13,18 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageItemEvent"
-            android:scaleType="fitCenter"/>
-
-        <TextView
-            android:id="@+id/itemEventTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/itemEventBase.title"/>
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -37,6 +25,13 @@
                 tools:text="20.11.1995"/>
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                tools:text="-"
+                style="@style/itemEventBaseDivider"/>
+
+            <TextView
                 tools:text="20.12.1995"
                 android:id="@+id/itemEventEnd"
                 android:layout_width="wrap_content"
@@ -45,10 +40,18 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/itemEventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/itemEventBase.title"
+            tools:text="Title of an event"/>
+
+        <TextView
             android:id="@+id/itemEventText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/itemEventBase.text"/>
+            style="@style/itemEventBase.text"
+            tools:text="Программа посвящена актуальной проблеме внутренней медицины – контролю и лечению основных факторов риска современного общества."/>
 
 
     </LinearLayout>

@@ -91,9 +91,14 @@
         <item name="android:textSize">@dimen/itemNewsBaseDateTextSize</item>
     </style>
 
+    <style name="itemEventBaseDivider">
+        <item name="android:textColor">@color/colorTextItemNews</item>
+    </style>
+
     <style name="itemEventBase.text" parent="itemNewsBase">
         <item name="android:textSize">@dimen/itemNewsBaseTxtTextSize</item>
         <item name="android:paddingTop">@dimen/itemNewsTextPaddingTop</item>
+        <item name="android:paddingBottom">@dimen/itemNewsTextPaddingBottom</item>
     </style>
 
     <style name="itemEventBase.title" parent="itemEventBase">

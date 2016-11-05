@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main">
 
-</LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/tryAgain"
+        style="@style/buttonTryAgain"
+        android:visibility="gone"
+        android:id="@+id/buttonTryAgain"
+        />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refreshRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.shppandroid1.app.MainActivity">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/recycleViewEvents" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
