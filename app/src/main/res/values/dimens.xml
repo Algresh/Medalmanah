@@ -28,4 +28,14 @@
     <dimen name="itemNewsBaseScoreTextSize">14sp</dimen>
 
     <dimen name="itemNewsTextPaddingBottom">8dp</dimen>
+
+    <dimen name="fabMargin">16dp</dimen>
+
+    <dimen name="searchEventsPaddingTop">8dp</dimen>
+    <dimen name="searchEventsPaddingLeft">8dp</dimen>
+    <dimen name="searchEventsPaddingRight">8dp</dimen>
+    <dimen name="searchEventsSearchLineTextSize">16sp</dimen>
+    <dimen name="searchEventsStartTextSize">16sp</dimen>
+    <dimen name="searchEventsEndTextSize">16sp</dimen>
+    <dimen name="searchEventsSpecializations">16sp</dimen>
 </resources>

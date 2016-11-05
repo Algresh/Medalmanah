@@ -6,7 +6,13 @@
 
     <string name="news">Новости</string>
     <string name="tryAgain">Попробывать снова</string>
-    
+    <string name="searchEvents">Поиск мероприятий</string>
+    <string name="searchLine">Строка поиска</string>
+    <string name="searchEventsStart">Дата начала</string>
+    <string name="searchEventsEnd">Дата окончания</string>
+    <string name="searchEventsSpecializations">Специальность</string>
+    <string name="searchEventsFilterBtn">Фильтровать</string>
+
     <string-array name="tabs_main">
         <item>Публикации</item>
         <item>Мероприятия</item>

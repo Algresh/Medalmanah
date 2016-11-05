@@ -2,8 +2,10 @@ package ru.tulupov.alex.medalmanah;
 
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 
 
 public class MainActivity extends BaseActivity {
@@ -17,6 +19,16 @@ public class MainActivity extends BaseActivity {
         initToolbar(resources.getString(R.string.news));
         initNavigationView();
         initTabs();
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabEvents);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                FilterEventsDialogFragment fragment = new FilterEventsDialogFragment();
+                fragment.show(getFragmentManager(),"sd" );
+            }
+        });
     }
 
     private void initTabs() {

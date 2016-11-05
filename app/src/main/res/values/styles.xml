@@ -106,5 +106,28 @@
         <item name="android:textSize">@dimen/itemNewsBaseTitleTextSize</item>
     </style>
 
+    <style name="eventSearch">
+        <item name="android:paddingTop">@dimen/searchEventsPaddingTop</item>
+        <item name="android:paddingLeft">@dimen/searchEventsPaddingLeft</item>
+        <item name="android:paddingRight">@dimen/searchEventsPaddingRight</item>
+        <item name="android:textColor">@color/colorTextSearchEvents</item>
+    </style>
+
+    <style name="eventSearch.start" parent="eventSearch">
+        <item name="android:textSize">@dimen/searchEventsStartTextSize</item>
+    </style>
+
+    <style name="eventSearch.end" parent="eventSearch">
+        <item name="android:textSize">@dimen/searchEventsStartTextSize</item>
+    </style>
+
+    <style name="eventSearch.specializations" parent="eventSearch">
+        <item name="android:textSize">@dimen/searchEventsSpecializations</item>
+    </style>
+
+    <style name="eventSearch.searchLine" parent="eventSearch">
+        <item name="android:textSize">@dimen/searchEventsSearchLineTextSize</item>
+    </style>
+
 
 </resources>

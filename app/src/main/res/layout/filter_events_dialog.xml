@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="eventSearch.searchLine">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editSearchEvents"
+            android:hint="@string/searchLine"
+            android:textColor="@color/colorTextSearchEvents"
+            tools:hint="@string/searchLine"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:text="@string/searchEventsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchEventsStart"
+        style="@style/eventSearch.start"/>
+
+    <TextView
+        android:text="@string/searchEventsEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchEventsEnd"
+        style="@style/eventSearch.end"/>
+
+    <TextView
+        android:text="@string/searchEventsSpecializations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchEventsSpecializations"
+        style="@style/eventSearch.specializations"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/searchEventsFilterBtn"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

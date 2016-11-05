@@ -11,4 +11,5 @@
     <color name="colorBackGroundNavigationView">#FFFFFF</color>
 
     <color name="colorTextItemNews">#000000</color>
+    <color name="colorTextSearchEvents">#000000</color>
 </resources>
