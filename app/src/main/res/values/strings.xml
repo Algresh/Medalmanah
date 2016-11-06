@@ -11,6 +11,7 @@
     <string name="searchEventsStart">Дата начала</string>
     <string name="searchEventsEnd">Дата окончания</string>
     <string name="searchEventsSpecializations">Специальность</string>
+    <string name="searchEventsLocation">Местоположение</string>
     <string name="searchEventsFilterBtn">Фильтровать</string>
 
     <string-array name="tabs_main">

@@ -2,7 +2,7 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    
+
     <dimen name="tabIndicatorHeight">6dp</dimen>
     <dimen name="navigationViewWidth">240dp</dimen>
     <dimen name="cardElevation">2dp</dimen>
@@ -31,11 +31,20 @@
 
     <dimen name="fabMargin">16dp</dimen>
 
-    <dimen name="searchEventsPaddingTop">8dp</dimen>
+    <dimen name="searchEventsPaddingTop">16dp</dimen>
     <dimen name="searchEventsPaddingLeft">8dp</dimen>
     <dimen name="searchEventsPaddingRight">8dp</dimen>
+    <dimen name="searchEventsFilterBtnWidth">200dp</dimen>
+    <dimen name="searchEventsFilterBtnHeight">50dp</dimen>
+    <dimen name="searchEventsFilterMarginTop">24dp</dimen>
+    <dimen name="searchEventsLayoutTop">16dp</dimen>
+
     <dimen name="searchEventsSearchLineTextSize">16sp</dimen>
     <dimen name="searchEventsStartTextSize">16sp</dimen>
     <dimen name="searchEventsEndTextSize">16sp</dimen>
     <dimen name="searchEventsSpecializations">16sp</dimen>
+    <dimen name="searchEventsLocation">16sp</dimen>
+    <dimen name="searchEventsFilterBtn">16sp</dimen>
+
+
 </resources>

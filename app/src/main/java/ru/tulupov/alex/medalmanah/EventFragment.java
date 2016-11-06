@@ -60,6 +60,10 @@ public class EventFragment extends BaseFragment implements EventView {
         return view;
     }
 
+    public void searchEvents () {
+
+    }
+
 
     private void initListOfEvents (List<Events> list) {
         manager = new LinearLayoutManager(getContext());

@@ -44,4 +44,12 @@ public class TabsMainAdapter extends FragmentPagerAdapter {
     public int getCount() {
         return titleTabs.length;
     }
+
+    public NewsFragment getNewsFragment() {
+        return newsFragment;
+    }
+
+    public EventFragment getEventFragment() {
+        return eventFragment;
+    }
 }

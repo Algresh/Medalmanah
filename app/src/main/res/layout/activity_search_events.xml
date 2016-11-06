@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--DELETE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-<!--DELETE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-<!--DELETE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-<!--DELETE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    style="@style/eventSearchLayout">
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:hintTextAppearance="@style/eventSearchSearchLineLayout">
 
-        <android.support.v7.widget.AppCompatEditText
-            style="eventSearch.searchLine"
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editSearchEvents"
             android:hint="@string/searchLine"
-            android:textColor="@color/colorTextSearchEvents"
-            tools:hint="@string/searchLine"
-            android:theme="@style/eventSearchSearchLine"/>
+            android:theme="@style/eventSearchSearchLine"
+            tools:hint="@string/searchLine"/>
 
     </android.support.design.widget.TextInputLayout>
-<!--//http://stackoverflow.com/questions/30546430/how-to-change-the-floating-label-color-of-textinputlayout-->
+
     <TextView
         android:text="@string/searchEventsStart"
         android:layout_width="wrap_content"
@@ -48,15 +43,25 @@
         android:id="@+id/searchEventsSpecializations"
         style="@style/eventSearch.specializations"/>
 
-    <LinearLayout
+    <TextView
+        android:text="@string/searchEventsLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchEventsLocation"
+        style="@style/eventSearch.location"/>
+
+    <FrameLayout
+        android:layout_marginTop="@dimen/searchEventsFilterMarginTop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Button
+            android:paddingTop="10dp"
             android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/searchEventsFilterBtn"/>
-    </LinearLayout>
+            android:layout_width="@dimen/searchEventsFilterBtnWidth"
+            android:layout_height="@dimen/searchEventsFilterBtnHeight"
+            android:text="@string/searchEventsFilterBtn"
+            style="@style/eventSearch.filterBtn" />
+    </FrameLayout>
 
 
 

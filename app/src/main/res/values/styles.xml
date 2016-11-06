@@ -125,9 +125,36 @@
         <item name="android:textSize">@dimen/searchEventsSpecializations</item>
     </style>
 
-    <style name="eventSearch.searchLine" parent="eventSearch">
-        <item name="android:textSize">@dimen/searchEventsSearchLineTextSize</item>
+    <style name="eventSearch.location" parent="eventSearch">
+        <item name="android:textSize">@dimen/searchEventsLocation</item>
     </style>
 
+    <style name="eventSearch.filterBtn">
+        <item name="android:textSize">@dimen/searchEventsFilterBtn</item>
+        <item name="android:textColor">@color/colorTextSearchEvents</item>
+    </style>
+
+    <style name="eventSearchLayout">
+        <item name="android:layout_marginTop">@dimen/searchEventsLayoutTop</item>
+    </style>
+
+    <!--<style name="eventSearch.searchLine" parent="eventSearch">-->
+        <!--<item name="android:textSize">@dimen/searchEventsSearchLineTextSize</item>-->
+        <!--<item name="android:textColorHint">@color/colorTextSearchEvents</item>-->
+        <!--<item name="colorAccent">@color/colorTextSearchEvents</item>-->
+    <!--</style>-->
+
+    <style name="eventSearchSearchLineLayout" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/colorTextSearchEvents</item>
+    </style>
+
+    <style name="eventSearchSearchLine" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/colorTextSearchEvents</item>
+        <item name="colorControlActivated">@color/colorTextSearchEvents</item>
+    </style>
+
+    <!--<style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">-->
+        <!--<item name="android:datePickerStyle">@style/MyDatePickerStyle</item>-->
+    <!--</style>-->
 
 </resources>
