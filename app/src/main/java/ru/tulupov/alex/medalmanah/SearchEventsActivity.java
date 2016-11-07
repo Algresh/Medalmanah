@@ -1,19 +1,25 @@
 package ru.tulupov.alex.medalmanah;
 
-import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
+
+import javax.inject.Inject;
+
+import ru.tulupov.alex.medalmanah.Presenter.SearchEventsPresenter;
+
+import static ru.tulupov.alex.medalmanah.Constants.MY_TAG;
 
 public class SearchEventsActivity extends AppCompatActivity
-        implements View.OnClickListener, MyDatePickerFragment.DatePickerListener {
+        implements View.OnClickListener, MyDatePickerFragment.DatePickerListener, SearchEventView, FragmentSpecialitiesDialog.SelectSpeciality {
 
     private static final String TYPE_DATE_START = "start";
     private static final String TYPE_DATE_END = "end";
@@ -24,10 +30,18 @@ public class SearchEventsActivity extends AppCompatActivity
     TextView specializationTV;
     TextView locationTV;
 
+    List<Speciality> specialityList;
+
+    @Inject
+    protected SearchEventsPresenter presenter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_events);
+
+        App.getComponent().inject(this);
+        presenter.onCreate(this);
 
         searchLine = (EditText) findViewById(R.id.editSearchEvents);
 
@@ -63,6 +77,18 @@ public class SearchEventsActivity extends AppCompatActivity
         }
     }
 
+    @Override
+    public void showSpecialities(ListSpecialities specialities) {
+        FragmentSpecialitiesDialog dialog = new FragmentSpecialitiesDialog();
+        dialog.setArraySpecialities(specialities);
+        dialog.show(getSupportFragmentManager(), "s");
+    }
+
+    @Override
+    public void showFailSpecialities() {
+
+    }
+
     private void setStartDate() {
         MyDatePickerFragment fragment = new MyDatePickerFragment();
         fragment.show(getFragmentManager(), TYPE_DATE_START);
@@ -74,7 +100,7 @@ public class SearchEventsActivity extends AppCompatActivity
     }
 
     private void setSpecialization() {
-
+        presenter.getSpecialities();
     }
 
     private void setLocation() {
@@ -95,5 +121,10 @@ public class SearchEventsActivity extends AppCompatActivity
             String txt = res.getString(R.string.searchEventsEnd);
             endDateTV.setText(txt +": " + dateFormat);
         }
+    }
+
+    @Override
+    public void selectSpeciality(Speciality speciality) {
+        Log.d(MY_TAG, speciality.title);
     }
 }

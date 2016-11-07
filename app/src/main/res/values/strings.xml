@@ -13,6 +13,8 @@
     <string name="searchEventsSpecializations">Специальность</string>
     <string name="searchEventsLocation">Местоположение</string>
     <string name="searchEventsFilterBtn">Фильтровать</string>
+    <string name="selectSpecialities">Выбор специальности</string>
+    <string name="cancel">Закрыть</string>
 
     <string-array name="tabs_main">
         <item>Публикации</item>

@@ -11,10 +11,10 @@ import ru.tulupov.alex.medalmanah.Presenter.NewsPresenter;
 @Module
 public class NewsModule {
 
-    protected String bseUrl;
+    protected String baseUrl;
 
     public NewsModule(String bseUrl) {
-        this.bseUrl = bseUrl;
+        this.baseUrl = bseUrl;
     }
 
 
@@ -25,7 +25,7 @@ public class NewsModule {
 
     @Provides
     ApiNews provideApiNews() {
-        RestAdapter adapter = new RestAdapter.Builder().setEndpoint(bseUrl).build();
+        RestAdapter adapter = new RestAdapter.Builder().setEndpoint(baseUrl).build();
         return adapter.create(ApiNews.class);
     }
 }
