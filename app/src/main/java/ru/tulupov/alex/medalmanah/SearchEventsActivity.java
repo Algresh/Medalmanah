@@ -19,7 +19,8 @@ import ru.tulupov.alex.medalmanah.Presenter.SearchEventsPresenter;
 import static ru.tulupov.alex.medalmanah.Constants.MY_TAG;
 
 public class SearchEventsActivity extends AppCompatActivity
-        implements View.OnClickListener, MyDatePickerFragment.DatePickerListener, SearchEventView, FragmentSpecialitiesDialog.SelectSpeciality {
+        implements View.OnClickListener, MyDatePickerFragment.DatePickerListener, SearchEventView
+        , FragmentSpecialitiesDialog.SelectSpeciality, FragmentLocationDialog.SelectLocation {
 
     private static final String TYPE_DATE_START = "start";
     private static final String TYPE_DATE_END = "end";
@@ -30,7 +31,7 @@ public class SearchEventsActivity extends AppCompatActivity
     TextView specializationTV;
     TextView locationTV;
 
-    List<Speciality> specialityList;
+    ListSpecialities specialityList;
 
     @Inject
     protected SearchEventsPresenter presenter;
@@ -79,6 +80,7 @@ public class SearchEventsActivity extends AppCompatActivity
 
     @Override
     public void showSpecialities(ListSpecialities specialities) {
+        specialityList = specialities;
         FragmentSpecialitiesDialog dialog = new FragmentSpecialitiesDialog();
         dialog.setArraySpecialities(specialities);
         dialog.show(getSupportFragmentManager(), "s");
@@ -100,11 +102,19 @@ public class SearchEventsActivity extends AppCompatActivity
     }
 
     private void setSpecialization() {
-        presenter.getSpecialities();
+        if (specialityList == null) {
+            presenter.getSpecialities();
+        } else  {
+            FragmentSpecialitiesDialog dialog = new FragmentSpecialitiesDialog();
+            dialog.setArraySpecialities(specialityList);
+            dialog.show(getSupportFragmentManager(), "s");
+        }
+
     }
 
     private void setLocation() {
-
+        FragmentLocationDialog dialog = new FragmentLocationDialog();
+        dialog.show(getSupportFragmentManager(), "g");
     }
 
     @Override
@@ -126,5 +136,10 @@ public class SearchEventsActivity extends AppCompatActivity
     @Override
     public void selectSpeciality(Speciality speciality) {
         Log.d(MY_TAG, speciality.title);
+    }
+
+    @Override
+    public void selectLocation(int location) {
+        Log.d(MY_TAG, location + "");
     }
 }

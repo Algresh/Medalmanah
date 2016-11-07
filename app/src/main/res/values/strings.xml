@@ -14,11 +14,18 @@
     <string name="searchEventsLocation">Местоположение</string>
     <string name="searchEventsFilterBtn">Фильтровать</string>
     <string name="selectSpecialities">Выбор специальности</string>
+    <string name="selectLocation">Выбор местоположения</string>
     <string name="cancel">Закрыть</string>
 
     <string-array name="tabs_main">
         <item>Публикации</item>
         <item>Мероприятия</item>
+    </string-array>
+
+    <string-array name="type_location">
+        <item>Любые</item>
+        <item>Российские</item>
+        <item>Зарубежные</item>
     </string-array>
 
     <string-array name="type_publications">
