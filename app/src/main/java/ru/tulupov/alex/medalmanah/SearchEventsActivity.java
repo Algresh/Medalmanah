@@ -1,10 +1,12 @@
 package ru.tulupov.alex.medalmanah;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -24,6 +26,10 @@ public class SearchEventsActivity extends AppCompatActivity
 
     private static final String TYPE_DATE_START = "start";
     private static final String TYPE_DATE_END = "end";
+    private static final String TAG_SPECIALITIES_DIALOG = "specialities";
+    private static final String TAG_LOCATION_DIALOG = "location";
+
+    public static final String SEARCH_PARAMETERS = "parameters";
 
     EditText searchLine;
     TextView startDateTV;
@@ -32,6 +38,7 @@ public class SearchEventsActivity extends AppCompatActivity
     TextView locationTV;
 
     ListSpecialities specialityList;
+    SearchEventParameters searchParameters;
 
     @Inject
     protected SearchEventsPresenter presenter;
@@ -40,6 +47,7 @@ public class SearchEventsActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_events);
+        searchParameters = new SearchEventParameters();
 
         App.getComponent().inject(this);
         presenter.onCreate(this);
@@ -54,6 +62,17 @@ public class SearchEventsActivity extends AppCompatActivity
         specializationTV.setOnClickListener(this);
         locationTV = (TextView) findViewById(R.id.searchEventsLocation);
         locationTV.setOnClickListener(this);
+
+        Button btnFilter = (Button) findViewById(R.id.btnEventsFilter);
+        btnFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent();
+                intent.putExtra(SEARCH_PARAMETERS, searchParameters);
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
 
 
     }
@@ -83,7 +102,8 @@ public class SearchEventsActivity extends AppCompatActivity
         specialityList = specialities;
         FragmentSpecialitiesDialog dialog = new FragmentSpecialitiesDialog();
         dialog.setArraySpecialities(specialities);
-        dialog.show(getSupportFragmentManager(), "s");
+        dialog.setSelectedItem(searchParameters.getSpeciality());
+        dialog.show(getSupportFragmentManager(), TAG_SPECIALITIES_DIALOG);
     }
 
     @Override
@@ -107,14 +127,16 @@ public class SearchEventsActivity extends AppCompatActivity
         } else  {
             FragmentSpecialitiesDialog dialog = new FragmentSpecialitiesDialog();
             dialog.setArraySpecialities(specialityList);
-            dialog.show(getSupportFragmentManager(), "s");
+            dialog.setSelectedItem(searchParameters.getSpeciality());
+            dialog.show(getSupportFragmentManager(), TAG_SPECIALITIES_DIALOG);
         }
 
     }
 
     private void setLocation() {
         FragmentLocationDialog dialog = new FragmentLocationDialog();
-        dialog.show(getSupportFragmentManager(), "g");
+        dialog.setSelectedItem(searchParameters.getLocation());
+        dialog.show(getSupportFragmentManager(), TAG_LOCATION_DIALOG);
     }
 
     @Override
@@ -125,21 +147,25 @@ public class SearchEventsActivity extends AppCompatActivity
 
 
         if (type.equals(TYPE_DATE_START)) {
+            searchParameters.setStart(dateFormat);
             String txt = res.getString(R.string.searchEventsStart);
             startDateTV.setText(txt + ": " + dateFormat);
         } else {
             String txt = res.getString(R.string.searchEventsEnd);
+            searchParameters.setEnd(dateFormat);
             endDateTV.setText(txt +": " + dateFormat);
         }
     }
 
     @Override
     public void selectSpeciality(Speciality speciality) {
+        searchParameters.setSpeciality(speciality);
         Log.d(MY_TAG, speciality.title);
     }
 
     @Override
     public void selectLocation(int location) {
+        searchParameters.setLocation(location);
         Log.d(MY_TAG, location + "");
     }
 }

@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.View;
+
+import static ru.tulupov.alex.medalmanah.Constants.MY_TAG;
 
 
 public class MainActivity extends BaseActivity {
@@ -48,6 +51,10 @@ public class MainActivity extends BaseActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 200 && data != null) {
 
+            SearchEventParameters parameters =
+                    (SearchEventParameters) data.getParcelableExtra(SearchEventsActivity.SEARCH_PARAMETERS);
+
+            Log.d(MY_TAG, parameters.getSpeciality().getTitle());
             /**
              * TODO add argument for searching
              */

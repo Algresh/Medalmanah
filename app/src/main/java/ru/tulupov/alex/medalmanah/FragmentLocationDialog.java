@@ -18,6 +18,7 @@ public class FragmentLocationDialog  extends DialogFragment implements DialogInt
 //    final static int SMALL_FONT_SIZE = 0;
 
     SelectLocation listener;
+    int selectedItem = 0;
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class FragmentLocationDialog  extends DialogFragment implements DialogInt
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle(res.getString(R.string.selectLocation))
-                .setSingleChoiceItems(res.getStringArray(R.array.type_location), 0, this)
+                .setSingleChoiceItems(res.getStringArray(R.array.type_location), selectedItem, this)
                 .setNegativeButton(res.getString(R.string.cancel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -42,6 +43,10 @@ public class FragmentLocationDialog  extends DialogFragment implements DialogInt
     public void onClick(DialogInterface dialog, int which) {
         listener.selectLocation(which);
         dismiss();
+    }
+
+    public void setSelectedItem(int selectedItem) {
+        this.selectedItem = selectedItem;
     }
 
     public interface SelectLocation {

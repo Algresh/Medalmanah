@@ -11,9 +11,6 @@ import android.os.Bundle;
 import java.lang.reflect.Array;
 import java.util.List;
 
-/**
- * Created by tulup on 07.11.2016.
- */
 
 public class FragmentSpecialitiesDialog extends DialogFragment implements DialogInterface.OnClickListener {
 
@@ -22,30 +19,51 @@ public class FragmentSpecialitiesDialog extends DialogFragment implements Dialog
 
     SelectSpeciality listener;
 
+    int selectedItem = 0;
+
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Resources res = getResources();
-
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setTitle(res.getString(R.string.selectSpecialities))
-                .setSingleChoiceItems(specialitiesTitle, 0, this)
-                .setNegativeButton(res.getString(R.string.cancel), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        dismiss();
-                    }
-                });
+
+        if (specialitiesArray != null && specialitiesTitle != null) {
+            builder.setTitle(res.getString(R.string.selectSpecialities))
+                    .setSingleChoiceItems(specialitiesTitle, selectedItem, this)
+                    .setNegativeButton(res.getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            dismiss();
+                        }
+                    });
+        }
 
         return builder.create();
     }
 
     public void setArraySpecialities (ListSpecialities specialities) {
+        if (specialities == null) {
+            return;
+        }
+
         List<Speciality> list = specialities.getSpecialties();
         specialitiesArray = new Speciality[list.size()];
         specialitiesTitle = new String[list.size()];
         for (int i = 0; i < list.size(); i++) {
             specialitiesArray[i] = list.get(i);
             specialitiesTitle[i] = list.get(i).getTitle();
+        }
+    }
+
+    public void setSelectedItem(Speciality speciality) {
+        if (speciality == null || specialitiesArray == null) {
+            return;
+        }
+
+        for(int i = 0; i < specialitiesArray.length; i++) {
+            if (speciality.getId() == specialitiesArray[i].getId()) {
+                selectedItem = i;
+                break;
+            }
         }
     }
 
