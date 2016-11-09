@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah.Presenter;
+package ru.tulupov.alex.medalmanah.presenter;
 
 public interface Presenter {
 

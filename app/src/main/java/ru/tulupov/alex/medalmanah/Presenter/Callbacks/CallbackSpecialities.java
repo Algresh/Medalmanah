@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah.Presenter.Callbacks;
+package ru.tulupov.alex.medalmanah.presenter.Callbacks;
 
 import ru.tulupov.alex.medalmanah.ListSpecialities;
 

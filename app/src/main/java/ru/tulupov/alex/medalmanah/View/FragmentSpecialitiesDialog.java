@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.view;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -8,8 +8,11 @@ import android.support.v7.app.AlertDialog;
 import android.content.res.Resources;
 import android.os.Bundle;
 
-import java.lang.reflect.Array;
 import java.util.List;
+
+import ru.tulupov.alex.medalmanah.ListSpecialities;
+import ru.tulupov.alex.medalmanah.R;
+import ru.tulupov.alex.medalmanah.Speciality;
 
 
 public class FragmentSpecialitiesDialog extends DialogFragment implements DialogInterface.OnClickListener {

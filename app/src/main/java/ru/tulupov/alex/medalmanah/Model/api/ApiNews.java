@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah.Model.api;
+package ru.tulupov.alex.medalmanah.model.api;
 
 import java.util.List;
 

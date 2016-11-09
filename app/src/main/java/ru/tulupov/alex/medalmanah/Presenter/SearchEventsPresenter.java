@@ -1,11 +1,11 @@
-package ru.tulupov.alex.medalmanah.Presenter;
+package ru.tulupov.alex.medalmanah.presenter;
 
 import javax.inject.Inject;
 
 import ru.tulupov.alex.medalmanah.App;
 import ru.tulupov.alex.medalmanah.ListSpecialities;
-import ru.tulupov.alex.medalmanah.Model.ModelImpl;
-import ru.tulupov.alex.medalmanah.Presenter.Callbacks.CallbackSpecialities;
+import ru.tulupov.alex.medalmanah.model.ModelImpl;
+import ru.tulupov.alex.medalmanah.presenter.Callbacks.CallbackSpecialities;
 import ru.tulupov.alex.medalmanah.SearchEventView;
 
 public class SearchEventsPresenter implements Presenter {

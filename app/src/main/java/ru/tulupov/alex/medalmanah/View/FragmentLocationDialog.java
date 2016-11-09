@@ -1,16 +1,15 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.view;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
-import android.widget.Toast;
+
+import ru.tulupov.alex.medalmanah.R;
+
 public class FragmentLocationDialog  extends DialogFragment implements DialogInterface.OnClickListener {
 
 //    final static int LARGE_FONT_SIZE = 2;

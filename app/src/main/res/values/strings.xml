@@ -16,6 +16,7 @@
     <string name="selectSpecialities">Выбор специальности</string>
     <string name="selectLocation">Выбор местоположения</string>
     <string name="cancel">Закрыть</string>
+    <string name="addSearchParameter">Добавить</string>
 
     <string-array name="tabs_main">
         <item>Публикации</item>

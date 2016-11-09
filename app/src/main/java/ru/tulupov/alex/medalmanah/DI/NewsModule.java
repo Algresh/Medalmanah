@@ -1,12 +1,10 @@
-package ru.tulupov.alex.medalmanah.DI;
-
-import javax.inject.Singleton;
+package ru.tulupov.alex.medalmanah.di;
 
 import dagger.Module;
 import dagger.Provides;
 import retrofit.RestAdapter;
-import ru.tulupov.alex.medalmanah.Model.api.ApiNews;
-import ru.tulupov.alex.medalmanah.Presenter.NewsPresenter;
+import ru.tulupov.alex.medalmanah.model.api.ApiNews;
+import ru.tulupov.alex.medalmanah.presenter.NewsPresenter;
 
 @Module
 public class NewsModule {

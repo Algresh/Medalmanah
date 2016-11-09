@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.view;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.widget.DatePicker;
 
 import java.util.Calendar;
+
+import ru.tulupov.alex.medalmanah.R;
 
 /**
  * Created by tulup on 06.11.2016.

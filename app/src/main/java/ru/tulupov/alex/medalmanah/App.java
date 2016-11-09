@@ -2,10 +2,10 @@ package ru.tulupov.alex.medalmanah;
 
 import android.app.Application;
 
-import ru.tulupov.alex.medalmanah.DI.AppComponent;
-import ru.tulupov.alex.medalmanah.DI.DaggerAppComponent;
-import ru.tulupov.alex.medalmanah.DI.EventModule;
-import ru.tulupov.alex.medalmanah.DI.NewsModule;
+import ru.tulupov.alex.medalmanah.di.AppComponent;
+import ru.tulupov.alex.medalmanah.di.DaggerAppComponent;
+import ru.tulupov.alex.medalmanah.di.EventModule;
+import ru.tulupov.alex.medalmanah.di.NewsModule;
 
 public class App extends Application {
 

@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah.Presenter;
+package ru.tulupov.alex.medalmanah.presenter;
 
 
 import ru.tulupov.alex.medalmanah.EventView;

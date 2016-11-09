@@ -1,8 +1,4 @@
-package ru.tulupov.alex.medalmanah.Model;
-
-import android.util.Log;
-
-import java.util.List;
+package ru.tulupov.alex.medalmanah.model;
 
 import javax.inject.Inject;
 
@@ -11,11 +7,9 @@ import retrofit.RetrofitError;
 import retrofit.client.Response;
 import ru.tulupov.alex.medalmanah.App;
 import ru.tulupov.alex.medalmanah.ListSpecialities;
-import ru.tulupov.alex.medalmanah.Model.api.ApiEvents;
-import ru.tulupov.alex.medalmanah.Model.api.ApiNews;
-import ru.tulupov.alex.medalmanah.Presenter.Callbacks.CallbackSpecialities;
-import ru.tulupov.alex.medalmanah.Speciality;
-import static ru.tulupov.alex.medalmanah.Constants.*;
+import ru.tulupov.alex.medalmanah.model.api.ApiEvents;
+import ru.tulupov.alex.medalmanah.model.api.ApiNews;
+import ru.tulupov.alex.medalmanah.presenter.Callbacks.CallbackSpecialities;
 
 public class ModelImpl {
 

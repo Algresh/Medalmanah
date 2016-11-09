@@ -12,11 +12,13 @@ import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.List;
 
 import javax.inject.Inject;
 
-import ru.tulupov.alex.medalmanah.Presenter.SearchEventsPresenter;
+import ru.tulupov.alex.medalmanah.presenter.SearchEventsPresenter;
+import ru.tulupov.alex.medalmanah.view.FragmentLocationDialog;
+import ru.tulupov.alex.medalmanah.view.FragmentSpecialitiesDialog;
+import ru.tulupov.alex.medalmanah.view.MyDatePickerFragment;
 
 import static ru.tulupov.alex.medalmanah.Constants.MY_TAG;
 
@@ -55,13 +57,20 @@ public class SearchEventsActivity extends AppCompatActivity
         searchLine = (EditText) findViewById(R.id.editSearchEvents);
 
         startDateTV = (TextView) findViewById(R.id.searchEventsStart);
-        startDateTV.setOnClickListener(this);
+        TextView addStartTv = (TextView) findViewById(R.id.addSearchEventStart);
+        addStartTv.setOnClickListener(this);
+
         endDateTV = (TextView) findViewById(R.id.searchEventsEnd);
-        endDateTV.setOnClickListener(this);
+        TextView addEndTv = (TextView) findViewById(R.id.addSearchEventEnd);
+        addEndTv.setOnClickListener(this);
+
         specializationTV = (TextView) findViewById(R.id.searchEventsSpecializations);
-        specializationTV.setOnClickListener(this);
+        TextView addSpecialityTv = (TextView) findViewById(R.id.addSearchEventSpecialities);
+        addSpecialityTv.setOnClickListener(this);
+
         locationTV = (TextView) findViewById(R.id.searchEventsLocation);
-        locationTV.setOnClickListener(this);
+        TextView addLocationTv = (TextView) findViewById(R.id.addSearchEventLocation);
+        addLocationTv.setOnClickListener(this);
 
         Button btnFilter = (Button) findViewById(R.id.btnEventsFilter);
         btnFilter.setOnClickListener(new View.OnClickListener() {
@@ -81,16 +90,16 @@ public class SearchEventsActivity extends AppCompatActivity
     public void onClick(View view) {
 
         switch (view.getId()) {
-            case R.id.searchEventsStart:
+            case R.id.addSearchEventStart:
                 setStartDate();
                 break;
-            case R.id.searchEventsEnd:
+            case R.id.addSearchEventEnd:
                 setEndDate();
                 break;
-            case R.id.searchEventsSpecializations:
+            case R.id.addSearchEventSpecialities:
                 setSpecialization();
                 break;
-            case R.id.searchEventsLocation:
+            case R.id.addSearchEventLocation:
                 setLocation();
                 break;
 

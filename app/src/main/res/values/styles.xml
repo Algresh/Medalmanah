@@ -129,6 +129,10 @@
         <item name="android:textSize">@dimen/searchEventsLocation</item>
     </style>
 
+    <style name="eventSearch.addParameter" parent="eventSearch">
+        <item name="android:textSize">@dimen/searchEventsParameter</item>
+    </style>
+
     <style name="eventSearch.filterBtn">
         <item name="android:textSize">@dimen/searchEventsFilterBtn</item>
         <item name="android:textColor">@color/colorTextSearchEvents</item>
@@ -136,6 +140,8 @@
 
     <style name="eventSearchLayout">
         <item name="android:layout_marginTop">@dimen/searchEventsLayoutTop</item>
+        <item name="android:paddingLeft">@dimen/searchEventsPaddingLeft</item>
+        <item name="android:paddingRight">@dimen/searchEventsPaddingRight</item>
     </style>
 
     <!--<style name="eventSearch.searchLine" parent="eventSearch">-->

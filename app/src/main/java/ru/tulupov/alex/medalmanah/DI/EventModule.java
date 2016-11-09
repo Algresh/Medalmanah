@@ -1,13 +1,12 @@
-package ru.tulupov.alex.medalmanah.DI;
+package ru.tulupov.alex.medalmanah.di;
 
 import dagger.Module;
 import dagger.Provides;
 import retrofit.RestAdapter;
-import ru.tulupov.alex.medalmanah.Model.ModelImpl;
-import ru.tulupov.alex.medalmanah.Model.api.ApiEvents;
-import ru.tulupov.alex.medalmanah.Model.api.ApiNews;
-import ru.tulupov.alex.medalmanah.Presenter.EventsPresenter;
-import ru.tulupov.alex.medalmanah.Presenter.SearchEventsPresenter;
+import ru.tulupov.alex.medalmanah.model.ModelImpl;
+import ru.tulupov.alex.medalmanah.model.api.ApiEvents;
+import ru.tulupov.alex.medalmanah.presenter.EventsPresenter;
+import ru.tulupov.alex.medalmanah.presenter.SearchEventsPresenter;
 
 @Module
 public class EventModule {

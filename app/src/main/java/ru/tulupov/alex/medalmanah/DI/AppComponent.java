@@ -1,11 +1,10 @@
-package ru.tulupov.alex.medalmanah.DI;
+package ru.tulupov.alex.medalmanah.di;
 
 import dagger.Component;
-import ru.tulupov.alex.medalmanah.EventFragment;
-import ru.tulupov.alex.medalmanah.Model.ModelImpl;
-import ru.tulupov.alex.medalmanah.NewsFragment;
-import ru.tulupov.alex.medalmanah.Presenter.EventsPresenter;
-import ru.tulupov.alex.medalmanah.Presenter.SearchEventsPresenter;
+import ru.tulupov.alex.medalmanah.view.EventFragment;
+import ru.tulupov.alex.medalmanah.model.ModelImpl;
+import ru.tulupov.alex.medalmanah.view.NewsFragment;
+import ru.tulupov.alex.medalmanah.presenter.SearchEventsPresenter;
 import ru.tulupov.alex.medalmanah.SearchEventsActivity;
 
 @Component(modules = {NewsModule.class, EventModule.class})

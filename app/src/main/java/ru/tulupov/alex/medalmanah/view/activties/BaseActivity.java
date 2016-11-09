@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.view.activties;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import ru.tulupov.alex.medalmanah.R;
 
 
 public class BaseActivity extends AppCompatActivity {

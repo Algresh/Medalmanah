@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.view;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

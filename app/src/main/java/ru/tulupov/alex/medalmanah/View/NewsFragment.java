@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,7 +15,11 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-import ru.tulupov.alex.medalmanah.Presenter.NewsPresenter;
+import ru.tulupov.alex.medalmanah.App;
+import ru.tulupov.alex.medalmanah.News;
+import ru.tulupov.alex.medalmanah.NewsView;
+import ru.tulupov.alex.medalmanah.presenter.NewsPresenter;
+import ru.tulupov.alex.medalmanah.R;
 
 public class NewsFragment extends BaseFragment implements NewsView {
 

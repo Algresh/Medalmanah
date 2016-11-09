@@ -31,6 +31,7 @@
 
     <dimen name="fabMargin">16dp</dimen>
 
+    <dimen name="addParameterPaddingTop">4dp</dimen>
     <dimen name="searchEventsPaddingTop">16dp</dimen>
     <dimen name="searchEventsPaddingLeft">8dp</dimen>
     <dimen name="searchEventsPaddingRight">8dp</dimen>
@@ -44,6 +45,7 @@
     <dimen name="searchEventsEndTextSize">16sp</dimen>
     <dimen name="searchEventsSpecializations">16sp</dimen>
     <dimen name="searchEventsLocation">16sp</dimen>
+    <dimen name="searchEventsParameter">18sp</dimen>
     <dimen name="searchEventsFilterBtn">16sp</dimen>
 
 
