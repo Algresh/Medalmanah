@@ -1,5 +1,7 @@
 package ru.tulupov.alex.medalmanah.model;
 
+import android.util.Log;
+
 import javax.inject.Inject;
 
 import retrofit.Callback;
@@ -10,8 +12,10 @@ import ru.tulupov.alex.medalmanah.model.dao.ListPublications;
 import ru.tulupov.alex.medalmanah.model.dao.ListSpecialities;
 import ru.tulupov.alex.medalmanah.model.api.ApiEvents;
 import ru.tulupov.alex.medalmanah.model.api.ApiNews;
-import ru.tulupov.alex.medalmanah.presenter.Callbacks.CallbackPublications;
-import ru.tulupov.alex.medalmanah.presenter.Callbacks.CallbackSpecialities;
+import ru.tulupov.alex.medalmanah.presenter.callbacks.CallbackPublications;
+import ru.tulupov.alex.medalmanah.presenter.callbacks.CallbackSpecialities;
+
+import static ru.tulupov.alex.medalmanah.Constants.MY_TAG;
 
 public class ModelImpl {
 
@@ -47,6 +51,7 @@ public class ModelImpl {
         apiNews.getPublicationsByPage(page, new Callback<ListPublications>() {
             @Override
             public void success(ListPublications listPublications, Response response) {
+                Log.d(MY_TAG, "fffffs");
                 if (listPublications != null) {
                     callbackPublications.setPublications(listPublications);
                 } else {

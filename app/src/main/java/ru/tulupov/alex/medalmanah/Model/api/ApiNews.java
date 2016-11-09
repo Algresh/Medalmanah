@@ -11,6 +11,6 @@ import ru.tulupov.alex.medalmanah.model.dao.News;
 public interface ApiNews {
 
     @GET("/api/publications/{page}")
-    void getPublicationsByPage(@Path("type") int page, Callback<ListPublications> news);
+    void getPublicationsByPage(@Path("page") int page, Callback<ListPublications> news);
 
 }

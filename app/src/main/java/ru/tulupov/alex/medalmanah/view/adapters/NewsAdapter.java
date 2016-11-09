@@ -19,8 +19,8 @@ import ru.tulupov.alex.medalmanah.R;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {
 
-    public static final int TYPE_NEWS = 0;
-    public static final int TYPE_ARTICLES = 1;
+    public static final int TYPE_NEWS = 1;
+    public static final int TYPE_ARTICLES = 0;
 
     private List<News> newsList;
     private Context context;

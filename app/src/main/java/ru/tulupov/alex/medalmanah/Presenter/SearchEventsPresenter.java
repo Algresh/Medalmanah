@@ -5,7 +5,7 @@ import javax.inject.Inject;
 import ru.tulupov.alex.medalmanah.App;
 import ru.tulupov.alex.medalmanah.model.dao.ListSpecialities;
 import ru.tulupov.alex.medalmanah.model.ModelImpl;
-import ru.tulupov.alex.medalmanah.presenter.Callbacks.CallbackSpecialities;
+import ru.tulupov.alex.medalmanah.presenter.callbacks.CallbackSpecialities;
 import ru.tulupov.alex.medalmanah.view.activties.SearchEventView;
 
 public class SearchEventsPresenter implements Presenter {

@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import ru.tulupov.alex.medalmanah.App;
+import ru.tulupov.alex.medalmanah.model.dao.ListPublications;
 import ru.tulupov.alex.medalmanah.model.dao.News;
 import ru.tulupov.alex.medalmanah.presenter.NewsPresenter;
 import ru.tulupov.alex.medalmanah.R;
@@ -58,7 +60,7 @@ public class NewsFragment extends BaseFragment implements NewsView {
             }
         });
 
-        initListOfNews(mock());
+        presenter.showNews();
 
         return view;
     }
@@ -96,5 +98,20 @@ public class NewsFragment extends BaseFragment implements NewsView {
     public void onStop() {
         super.onStop();
         presenter.onStop();
+    }
+
+    @Override
+    public void showNews(ListPublications publications) {
+        initListOfNews(publications.getPublications());
+    }
+
+    @Override
+    public void showNewsByPage(ListPublications publications) {
+
+    }
+
+    @Override
+    public void failShowNews() {
+        Toast.makeText(getContext(),"fail", Toast.LENGTH_SHORT).show();
     }
 }

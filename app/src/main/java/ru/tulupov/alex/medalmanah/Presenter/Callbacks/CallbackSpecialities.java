@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah.presenter.Callbacks;
+package ru.tulupov.alex.medalmanah.presenter.callbacks;
 
 import ru.tulupov.alex.medalmanah.model.dao.ListSpecialities;
 
