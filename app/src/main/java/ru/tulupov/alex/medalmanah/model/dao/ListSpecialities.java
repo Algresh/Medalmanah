@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.model.dao;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;

@@ -1,6 +1,6 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.model.dao;
 
-public class News {
+public class Events {
 
     protected int id;
 
@@ -10,19 +10,13 @@ public class News {
 
     protected String preview;
 
-    protected String created;
+    protected String start;
+
+    protected String end;
 
     protected String slug;
 
     protected int type;
-
-    protected int like;
-
-    protected int dislike;
-
-    protected int commentCount;
-
-    protected int rating;
 
     public int getId() {
         return id;
@@ -56,12 +50,20 @@ public class News {
         this.preview = preview;
     }
 
-    public String getCreated() {
-        return created;
+    public String getStart() {
+        return start;
     }
 
-    public void setCreated(String created) {
-        this.created = created;
+    public void setStart(String start) {
+        this.start = start;
+    }
+
+    public String getEnd() {
+        return end;
+    }
+
+    public void setEnd(String end) {
+        this.end = end;
     }
 
     public String getSlug() {
@@ -78,37 +80,5 @@ public class News {
 
     public void setType(int type) {
         this.type = type;
-    }
-
-    public int getLike() {
-        return like;
-    }
-
-    public void setLike(int like) {
-        this.like = like;
-    }
-
-    public int getDislike() {
-        return dislike;
-    }
-
-    public void setDislike(int dislike) {
-        this.dislike = dislike;
-    }
-
-    public int getCommentCount() {
-        return commentCount;
-    }
-
-    public void setCommentCount(int commentCount) {
-        this.commentCount = commentCount;
-    }
-
-    public int getRating() {
-        return rating;
-    }
-
-    public void setRating(int rating) {
-        this.rating = rating;
     }
 }

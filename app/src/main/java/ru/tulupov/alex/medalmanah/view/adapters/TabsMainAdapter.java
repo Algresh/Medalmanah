@@ -1,8 +1,11 @@
-package ru.tulupov.alex.medalmanah.view;
+package ru.tulupov.alex.medalmanah.view.adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import ru.tulupov.alex.medalmanah.view.fragments.EventFragment;
+import ru.tulupov.alex.medalmanah.view.fragments.NewsFragment;
 
 
 public class TabsMainAdapter extends FragmentPagerAdapter {

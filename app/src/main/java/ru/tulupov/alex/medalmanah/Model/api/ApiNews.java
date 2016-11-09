@@ -5,7 +5,7 @@ import java.util.List;
 import retrofit.Callback;
 import retrofit.http.GET;
 import retrofit.http.Path;
-import ru.tulupov.alex.medalmanah.News;
+import ru.tulupov.alex.medalmanah.model.dao.News;
 
 public interface ApiNews {
 

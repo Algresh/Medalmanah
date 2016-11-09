@@ -1,4 +1,6 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.view.activties;
+
+import ru.tulupov.alex.medalmanah.model.dao.ListSpecialities;
 
 public interface SearchEventView {
 

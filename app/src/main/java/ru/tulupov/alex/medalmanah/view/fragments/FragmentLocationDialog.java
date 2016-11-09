@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah.view;
+package ru.tulupov.alex.medalmanah.view.fragments;
 
 import android.app.Activity;
 import android.app.Dialog;

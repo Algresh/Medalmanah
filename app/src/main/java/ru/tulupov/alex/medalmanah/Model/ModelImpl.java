@@ -6,7 +6,7 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 import ru.tulupov.alex.medalmanah.App;
-import ru.tulupov.alex.medalmanah.ListSpecialities;
+import ru.tulupov.alex.medalmanah.model.dao.ListSpecialities;
 import ru.tulupov.alex.medalmanah.model.api.ApiEvents;
 import ru.tulupov.alex.medalmanah.model.api.ApiNews;
 import ru.tulupov.alex.medalmanah.presenter.Callbacks.CallbackSpecialities;

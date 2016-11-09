@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.view.activties;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -11,8 +11,9 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
-import ru.tulupov.alex.medalmanah.view.activties.BaseActivity;
-import ru.tulupov.alex.medalmanah.view.TabsMainAdapter;
+import ru.tulupov.alex.medalmanah.R;
+import ru.tulupov.alex.medalmanah.model.dao.SearchEventParameters;
+import ru.tulupov.alex.medalmanah.view.adapters.TabsMainAdapter;
 
 import static ru.tulupov.alex.medalmanah.Constants.MY_TAG;
 

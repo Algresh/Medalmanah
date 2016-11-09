@@ -1,6 +1,6 @@
 package ru.tulupov.alex.medalmanah.presenter;
 
-import ru.tulupov.alex.medalmanah.NewsView;
+import ru.tulupov.alex.medalmanah.view.fragments.NewsView;
 
 public class NewsPresenter implements Presenter {
 

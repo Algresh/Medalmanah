@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah.view;
+package ru.tulupov.alex.medalmanah.view.adapters;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import ru.tulupov.alex.medalmanah.App;
-import ru.tulupov.alex.medalmanah.News;
+import ru.tulupov.alex.medalmanah.model.dao.News;
 import ru.tulupov.alex.medalmanah.R;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder> {

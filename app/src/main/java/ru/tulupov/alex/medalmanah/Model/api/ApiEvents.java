@@ -2,7 +2,7 @@ package ru.tulupov.alex.medalmanah.model.api;
 
 import retrofit.Callback;
 import retrofit.http.GET;
-import ru.tulupov.alex.medalmanah.ListSpecialities;
+import ru.tulupov.alex.medalmanah.model.dao.ListSpecialities;
 
 public interface ApiEvents {
 

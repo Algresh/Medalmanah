@@ -1,7 +1,7 @@
 package ru.tulupov.alex.medalmanah.presenter;
 
 
-import ru.tulupov.alex.medalmanah.EventView;
+import ru.tulupov.alex.medalmanah.view.fragments.EventView;
 
 public class EventsPresenter implements Presenter {
 

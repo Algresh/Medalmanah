@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah.view;
+package ru.tulupov.alex.medalmanah.view.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import ru.tulupov.alex.medalmanah.Events;
+import ru.tulupov.alex.medalmanah.model.dao.Events;
 import ru.tulupov.alex.medalmanah.R;
 
 public class EventAdapter extends RecyclerView.Adapter<EventAdapter.EventViewHolder> {

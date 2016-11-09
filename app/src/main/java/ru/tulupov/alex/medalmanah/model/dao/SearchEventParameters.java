@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.model.dao;
 
 import android.os.Parcel;
 import android.os.Parcelable;

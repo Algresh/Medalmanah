@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah.view;
+package ru.tulupov.alex.medalmanah.view.fragments;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -10,9 +10,9 @@ import android.os.Bundle;
 
 import java.util.List;
 
-import ru.tulupov.alex.medalmanah.ListSpecialities;
+import ru.tulupov.alex.medalmanah.model.dao.ListSpecialities;
 import ru.tulupov.alex.medalmanah.R;
-import ru.tulupov.alex.medalmanah.Speciality;
+import ru.tulupov.alex.medalmanah.model.dao.Speciality;
 
 
 public class FragmentSpecialitiesDialog extends DialogFragment implements DialogInterface.OnClickListener {

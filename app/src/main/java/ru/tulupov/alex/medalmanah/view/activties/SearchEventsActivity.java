@@ -1,4 +1,4 @@
-package ru.tulupov.alex.medalmanah;
+package ru.tulupov.alex.medalmanah.view.activties;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -15,10 +15,15 @@ import java.util.Calendar;
 
 import javax.inject.Inject;
 
+import ru.tulupov.alex.medalmanah.App;
+import ru.tulupov.alex.medalmanah.model.dao.ListSpecialities;
+import ru.tulupov.alex.medalmanah.R;
+import ru.tulupov.alex.medalmanah.model.dao.SearchEventParameters;
+import ru.tulupov.alex.medalmanah.model.dao.Speciality;
 import ru.tulupov.alex.medalmanah.presenter.SearchEventsPresenter;
-import ru.tulupov.alex.medalmanah.view.FragmentLocationDialog;
-import ru.tulupov.alex.medalmanah.view.FragmentSpecialitiesDialog;
-import ru.tulupov.alex.medalmanah.view.MyDatePickerFragment;
+import ru.tulupov.alex.medalmanah.view.fragments.FragmentLocationDialog;
+import ru.tulupov.alex.medalmanah.view.fragments.FragmentSpecialitiesDialog;
+import ru.tulupov.alex.medalmanah.view.fragments.MyDatePickerFragment;
 
 import static ru.tulupov.alex.medalmanah.Constants.MY_TAG;
 
@@ -169,7 +174,7 @@ public class SearchEventsActivity extends AppCompatActivity
     @Override
     public void selectSpeciality(Speciality speciality) {
         searchParameters.setSpeciality(speciality);
-        Log.d(MY_TAG, speciality.title);
+        Log.d(MY_TAG, speciality.getTitle());
     }
 
     @Override
