@@ -6,9 +6,11 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 import ru.tulupov.alex.medalmanah.App;
+import ru.tulupov.alex.medalmanah.model.dao.ListPublications;
 import ru.tulupov.alex.medalmanah.model.dao.ListSpecialities;
 import ru.tulupov.alex.medalmanah.model.api.ApiEvents;
 import ru.tulupov.alex.medalmanah.model.api.ApiNews;
+import ru.tulupov.alex.medalmanah.presenter.Callbacks.CallbackPublications;
 import ru.tulupov.alex.medalmanah.presenter.Callbacks.CallbackSpecialities;
 
 public class ModelImpl {
@@ -39,5 +41,24 @@ public class ModelImpl {
                 callbackSpecialities.failSpecialities();
             }
         });
+    }
+
+    public void getListPublicationsByPage (int page, final CallbackPublications callbackPublications) {
+        apiNews.getPublicationsByPage(page, new Callback<ListPublications>() {
+            @Override
+            public void success(ListPublications listPublications, Response response) {
+                if (listPublications != null) {
+                    callbackPublications.setPublications(listPublications);
+                } else {
+                    callbackPublications.failPublications();
+                }
+            }
+
+            @Override
+            public void failure(RetrofitError error) {
+                callbackPublications.failPublications();
+            }
+        });
+
     }
 }

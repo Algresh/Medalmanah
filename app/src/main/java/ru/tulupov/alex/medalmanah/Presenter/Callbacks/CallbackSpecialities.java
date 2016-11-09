@@ -7,5 +7,4 @@ public interface CallbackSpecialities {
     void setSpecialities (ListSpecialities specialities);
     void failSpecialities ();
 
-
 }
